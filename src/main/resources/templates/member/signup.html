@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:insert="layout/layout-user :: head"/>
+		<script  type="text/javascript" src="/js/member/signup.js"></script>
+		<link rel="stylesheet" href="/css/member/signup.css">
+	</head>
+	<body>
+		<th:block th:insert="~{layout/layout-user ::header}">
+		</th:block>
+		<main>
+			<h1>메인영역</h1>
+			<section>
+				<div class="wrap">
+					<form action="/sign/signup" method="post">
+						<div class="content-wrap">
+							<h2>회원가입</h2>
+							<div class="essential">
+								<label>이메일</label> 
+								<input type="text" placeholder="이메일을 입력하세요." name="email" id="email">
+								<span class="input-err" id="email-err">이메일은 필수 입력 항목입니다.</span>
+							</div>
+							<div class="essential">
+								 <label>비밀번호</label>
+								 <input type="password"	placeholder="바밀번호를 입력하세요." name="pw" id="pwd1"> 
+								 <span class="input-err" id="pwd-err">비밀번호는 필수 입력 항목입니다.</span>
+							</div>
+							<div class="essential">
+								<label>비밀번호 확인</label>
+								 <input type="password"	placeholder="바밀번호를 다시 한번 입력하세요." id="pwd2"> 
+								 <span class="input-err" id="pwd-check-err">비밀번호가 일치하지 않습니다.</span>
+							</div>
+							<div class="essential">
+								<label>이름</label>
+								 <input type="text"	placeholder="이름을 입력하세요." name="name" id="name"> 
+								 <span class="input-err" id="pwd-err">이름은 필수 입력 항목입니다.</span>
+							</div>
+							<div class="phone">
+								<label>휴대폰 번호</label>
+								 <input type="text"	placeholder="휴대폰 번호를 입력하세요."> 
+								 <a>인증받기</a>
+								 <span class="input-err" id="pwd-err">휴대폰 번호는 필수 입력 항목입니다.</span>
+							</div>
+							<div class="phone">
+								 <label>인증 번호</label>
+								 <input type="text"	placeholder="인증번호를 입력하세요."> 
+								  <a>인증번호 제출</a>
+								 <span class="input-err" id="pwd-err">인증번호는 필수 항목입니다.</span>
+							</div>
+							<div class="agree-term-area">
+								<dl class="terms">
+									<dt class="terms-tit">
+										<input type="checkbox" id="check-all">
+										<label for="check-all" class="terms-label">전체약관동의</label>
+									</dt>
+									<dd class="flex between">
+										<div class="check-box flex">
+											<input type="checkbox" id="fourteen">
+											<label for="fourteen" class="terms-label">[필수] 만14세 이상입니다.</label>
+										</div>
+										<a href="#">보기</a>
+									</dd>
+									<dd class="flex between">
+										<div class="check-box flex">
+											<input type="checkbox" id="termsagree">
+											<label for="termsagree" class="terms-label">[필수] 이용약관동의</label>
+										</div>
+										<a href="#">보기</a>
+									</dd>
+									<dd>
+										<div class="flex between">
+											<div class="check-box flex">
+												<input type="checkbox" id="finance">
+												<label for="finance" class="terms-label">[필수] 전자금융거래약관</label>
+											</div>
+										<a href="#">보기</a>
+										</div>	
+									</dd>
+									<dd>
+										<div class="flex between" >
+											<div class="check-box flex">
+												<input type="checkbox" id="privacy">
+												<label for="privacy" class="terms-label">[필수] 개인정보 수집 및 이용 동의</label>
+											</div>
+											<a href="#">보기</a>
+										</div>
+										<table id="privacy-table">
+										<tr>
+											<th><strong>&#8251;개인정보 수집</strong></th>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th>목적</th>
+											<td style="padding-right:1em">&#58;</td>
+											<td>개인식별, 서비스 ,이용알림,고객 고충처리
+											</tr>
+										<tr>
+											<th>항목</th>
+											<td>&#58;</td>
+											<td>이름,아이디,비밀번호,전화번호
+										</tr>
+										<tr>
+											<th>보유기간</th>
+											<td>&#58;</td>
+											<td><b>회원탈퇴시 즉시 파기</b></td>
+										</tr>
+										</table>
+								</dd>
+								<dd>
+										<div class="flex between" >
+											<div class="check-box flex">
+												<input type="checkbox" id="optional-info">
+												<label for="optional-info" class="terms-label">[선택] 선택정보 수집 및 이용동의</label>
+											</div>
+											<a href="#">보기</a>
+										</div>
+										<table id="privacy-table">
+										<tr>
+											<th><strong>&#8251;선택정보 수집</strong></th>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th>목적</th>
+											<td style="padding-right:1em">&#58;</td>
+											<td>혜택,서비스 알림
+											</tr>
+										<tr>
+											<th>항목</th>
+											<td>&#58;</td>
+											<td>이메일, 추천인 아이디
+										</tr>
+										<tr>
+											<th>보유기간</th>
+											<td>&#58;</td>
+											<td><b>회원탈퇴시 즉시 파기</b></td>
+										</tr>
+										</table>
+								</dd>
+								<dd class="flex between">
+										<div class="check-box flex">
+											<input type="checkbox" id="adservice">
+											<label for="adservice" class="terms-label">[선택] 혜택 정보 및 광고 수신 동의(SMS, E-mail)</label>
+										</div>
+										<a href="#">보기</a>
+									</dd>
+								</dl>
+								<div>
+								<p class="join_lastTxt">
+								오아시스마켓 이용약관 및 개인정보 동의 내용을 확인하였으며,
+								<br>위 내용에 동의합니다. 만 14세 미만 아동은 회원가입이 불가합니다.
+								</p>
+								</div>
+								<div>
+								<button id="join-btn">
+								회원가입 하기
+								</button>
+								</div>
+							</div>
+						</div>
+						</form>
+					</div>
+			</section>
+		</main>
+		<div th:replace="~{layout/layout-user :: footer}">
+		</div>
+	</body>
+</html>

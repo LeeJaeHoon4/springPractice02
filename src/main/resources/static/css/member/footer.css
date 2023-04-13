@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url('../common.css');
+/*##############################
+#########footer#################
+################################*/
+#footer-div{
+	padding: 50px 0 32px;
+}
+#footer-info{
+	position: relative;
+}
+#footer-info li{
+	padding-right:8px;
+}
+#footer-info li a{
+	margin-left: 8px;
+	font-size: 13px;
+	line-height: 1;
+}
+#footer-info li:not(:first-child)::before{
+	content:"";
+	border-right : 1px solid #a9a9a9;
+	height: 13px;
+    position: absolute;
+    top: 4px;
+}
+
+#footer-copy{
+	margin-top:8px;
+	text-align : center;
+}
+#footer-copy>a.logo{
+	color:#03c75a;
+	font-size:16px;
+}
+#footer-copy span{
+	margin-left:8px;
+}

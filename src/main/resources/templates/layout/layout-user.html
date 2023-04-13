@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/css/member/signup.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<header th:fragment="header">
+	<h1>헤더</h1>
+	<section id="header-logo">
+		<h1>헤더 로고</h1>
+		<div class="wrap view-size-log">
+			<ul class="flex center">
+				<li><a href="/" class="maincolor logo">HOME</a></li>
+			</ul>
+		</div>
+	</section>
+</header>
+<footer th:fragment="footer">
+	<h1>푸터영역</h1>
+	<section>
+		<h1>푸터</h1>
+		<div class="wrap view-size-log" id="footer-div">
+			<ul class="flex center" id="footer-info">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="#">책임의 한계와 법적고지</a></li>
+				<li><a href="#">회원정보 고객센터</a></li>
+			</ul>
+			<div class="flex center" id="footer-copy">
+				<a href="#" class="logo">HOME</a> <span>Copyright </span> <span>
+				<b>&copy;LJH Corp.</b></span> <span>All Rights Reserved.</span>
+			</div>
+		</div>
+	</section>
+</footer>
+</html>

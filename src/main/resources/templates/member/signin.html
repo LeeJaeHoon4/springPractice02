@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/css/member/signin.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<script  type="text/javascript" src="/js/member/signin.js"></script>
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<header>
+			<h1>헤더</h1>
+			<section id="header-logo">
+				<h1>헤더 로고</h1>
+				<div class="wrap view-size-log">
+					<ul class="flex center">
+						<li><a href="/" class="maincolor logo">HOME</a></li>
+					</ul>
+				</div>
+			</section>
+		</header>
+		<main>
+			<h1>메인 영역</h1>
+			<section>
+				<h1>메인 로그인 영역</h1>
+				<div class="wrap ">
+					<section id="login-form-sec">
+						<h1>로그인폼</h1>
+						<div class="wrap view-size-log" >
+							<ul class="flex menu-box" >
+								<li class="menu view">로그인</li>
+								<li class="menu">일회용번호</li>
+								<li class="menu">QR코드</li>
+							</ul>
+							<ol class="menu-content-box">
+								<li class="menu-content">
+									<form id="login-form">
+									<ul>
+										<li>
+											<span class="material-symbols-outlined icon">lock</span>
+											<input type="text" placeholder="아이디를 입력해주세요">
+										</li>
+										<li>
+											<span class="material-symbols-outlined icon" >person</span>
+											<input type="text" placeholder="비밀번호를 입력해주세요">
+										</li>
+										<li class="flex between">
+											<div class="flex column center">
+												<span>
+													<input type="checkbox" id="keep">
+													<label for="keep"id="keep-label">로그인 상태 유지</label>
+												</span>
+											</div>
+											<div class="flex column center">
+												<span>
+													<label for="ip-sec" id="ip-sec-label">ip보안</label> 
+													<input type="checkbox" id="ip-sec">
+												</span>
+											</div>
+											</li>
+											<li>
+												<button type="submit">로그인</button>
+											</li>
+										</ul>
+									</form>
+								</li>
+								<li class="menu-content">
+									<form id="login-form-mobile">
+										<ul>
+											<div class="settings-info-div">
+												<p>
+													네이버앱의 <span class='maincolor'>메뉴설정</span>
+													<span class="material-symbols-rounded maincolor" id="settings">settings</span>
+													<span class="maincolor"> &gt; 로그인 아이디 관리 &gt;</span>
+													<br>
+													<span class="maincolor">더보기 &#8942;&gt;일회용 로그인 번호</span>
+													에 보이는 번호를 입력해주세요.
+													<span></span>					
+												 </p>
+											</div>
+											<li id="mnumber">
+												<input type="text" placeholder="번호를 입력해주세요">
+											</li>
+											<li>
+												<button type="submit">로그인</button>
+											</li>
+									</ul>
+									</form>
+								</li>
+								<li class="menu-content">
+									<form id="login-form-qr">
+										<div class="wrap qr-div">
+											<div>
+												<img src="/images/qr.png" id="qr-img">
+											</div>
+											<div>
+												<p>
+													공용 네트워크, 공용 PC라면 안전을 위해
+													<br>
+													QR코드로 로그인해주세요.
+												</p>
+											</div>
+											<div>
+												<p>
+													네이버 앱  > 렌즈  를 눌러 QR코드를 스캔하여
+													<br>
+													보이는 숫자 중 를 선택하면 로그인 됩니다. 도움말
+												</p>		
+											</div>
+										</div>
+									</form>
+								</li>
+							</ol>
+						</div>
+					</section>		
+					<!-- 비밀번호 아이디 찾기 -->
+					<section>
+						<h1>비밀번호 아이디 찾기 및 회원가입</h1>
+						<div class="wrap view-size-log" style="padding: 20px 0 35px;">
+							<ul id="pwd-id-search" class="flex center">
+								<li><a href="#">비밀번호찾기</a></li>
+								<li><a href="#">아이디찾기</a></li>
+								<li><a href="#">회원가입</a></li>
+							</ul>
+						</div>
+					</section>
+					</div>
+			</section>
+		</main>
+		<div th:replace="~{layout/layout-user ::footer}">
+		</div>
+	</body>
+</html>

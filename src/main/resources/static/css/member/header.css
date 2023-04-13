@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import url('../common.css');
+/*##############################
+#########header#################
+################################*/
+
+#header-logo>div>ul{
+	margin-top:68px;
+	padding-bottom:40px;
+}
+
+.logo{
+	font-family: 'monoton';
+	color: #03c75a !important;
+	font-size: 48px;
+	font-weight: 400;
+}

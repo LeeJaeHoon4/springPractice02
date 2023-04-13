@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import url('../common.css');
+@import url('footer.css');
+@import url('header.css');
+
+.wrap{
+	margin:0 auto;
+	width:460px;
+	padding-bottom:40px;
+}
+.content-wrap div{
+	width:100%;
+	height:100%;
+}
+.content-wrap h2{
+	text-align: center;
+}
+
+ label{
+	display:flex;
+	height:40px;
+	padding-left: 3px;
+	padding-top : 1em;
+}
+.esstential{
+	height:120px;
+	margin-top:8px;
+}
+.content-wrap div.essential input{
+	height: 60px;
+	padding: 14px 17px;
+	border : 1px solid #dadada;
+	border-radius: 6px;
+	width:100%;
+}
+
+.input-err{
+    font-size: 14px;
+    color: #f40505;
+    display:none;
+}
+
+.phone input{
+	width: 350px;
+	height: 60px;
+	padding: 14px 17px;
+	border : 1px solid #dadada;
+	border-radius: 6px;
+}
+
+.phone a{
+	display:inline-block;
+	width:90px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #dadada;
+	border-radius: 6px;
+    margin-left: 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.phone a:hover{
+	background-color: black;
+	color:white;
+}
+
+
+.agree-term-area dd{
+	margin-top: 23px;
+}
+.agree-term-area{
+	border-top:3px solid #dadada;
+	padding-top:20px;
+	margin-top:20px;
+}
+
+.terms-tit input {
+	display:none;
+}
+.terms-tit input:checked +label::before{
+	background-color: #03c75a;
+}
+.terms-tit input +label::before {
+	content:"✔";
+	display:block;
+	background:#dadada;
+	height:24px;
+	width:24px;
+	border-radius: 50%;
+	margin-right: 8px;
+	line-height: 1.5em;
+    text-align: center;
+    color:white;
+}
+
+.terms-tit input +label{
+	line-height: 1.5em;
+}
+
+.terms-tit::after{
+	content:"";
+	display: block;
+	border-bottom: 1px solid #dadada;
+	width:100%;
+	margin-top:20px;
+}
+
+dd a{
+	width: 40px;
+	line-height: 1.5em;
+	text-decoration: underline;
+}
+dd a:link{text-decoration: underline;}
+
+.terms-label{
+	padding:0;
+	height:100%;
+}
+.check-box input{
+	display:none;
+}
+
+.check-box input:checked +label::before{
+	background-color: #03c75a;
+}
+.check-box input +label{
+	padding:none;
+	line-height: 1.5em;
+}
+.check-box input +label:hover{
+	cursor: pointer;
+}
+.check-box input +label::before {
+	content:"✔";
+	display:block;
+	background:#dadada;
+	height:24px;
+	width:24px;
+	border-radius: 50%;
+	margin-right: 8px;
+	line-height: 1.5em;
+    text-align: center;
+    color:white;
+}
+#privacy-table{
+	width:100%;
+	border:1px solid  #dadada;
+	padding:18px;
+	line-height: 26px;
+	margin-top: 1em;
+}
+
+#privacy-table th{
+	text-align: left;
+	font-weight: 400;
+}
+.join_lastTxt{
+	text-align:center;
+	color:red;
+	border-top: 2px solid #dadada;
+	margin-top:20px;
+	padding-top: 20px;
+}
+#join-btn{
+	width:100%;
+	height:60px;
+	border-radius: 6px;
+	background-color: #03c75a;
+	color: white;
+	font-size: 30px;
+	margin-top:30px;
+}
